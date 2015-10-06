@@ -1,3 +1,10 @@
+### Install Party
+
+* Install [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* Install [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
+* Install the JREPL IntelliJ plugin
+  * Preferences -> Browse repositories… -> Search for “JREPL”
+
 ### Day 1
 
 * Overview of the class
