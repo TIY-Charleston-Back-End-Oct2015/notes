@@ -40,3 +40,35 @@
       * Every keyboard code and the character it represents
       * The points scored for each player on a team
       * The departure time for every plane in an airline's fleet
+
+### Day 2
+
+* Writing code in a file
+  * Create the Contact class from yesterday in a file
+  * Use the class in JREPL
+  * You need to add "public" to access it from JREPL
+  * A class is more than just a data structure; it can contain code
+  * All code must exist inside a class
+  * Create `setName` and `getName` methods
+    * Can be useful over direct field access if you want to enforce constraints
+    * Interesting comments from [Notch](http://notch.tumblr.com/post/15782716917/coding-skill-and-the-decline-of-stagnation) on getters and setters
+  * Create a constructor that takes a name
+* Work through examples of using string methods in the REPL
+  * Look up the Java doc for `String`
+  * Call methods
+    * `charAt`
+    * `contains`
+    * `indexOf`
+    * `split`
+    * `startsWith`
+    * `substring`
+    * `toUpperCase`
+    * `trim`
+  * Mutation
+    * Strings are immutable; their methods return a new string if necessary
+    * Mutation is a common source of bugs; a variable can contain something you didn't expect
+* Static methods and fields
+  * They're stored in the class rather than in each object
+  * Use static methods if it is "standalone" (no need to access fields)
+  * Static methods and fields (look at the ones in `Math` and `System`)
+  * Create a static method `isValidName` in our project and run it in the REPL
