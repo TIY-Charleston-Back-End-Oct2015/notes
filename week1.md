@@ -43,6 +43,17 @@
 
 ### Day 2
 
+* Overview of Git
+  * Why track changes?
+    * Collaboration
+    * Revert mistakes
+    * Offsite backup
+  * Interesting comments from [Tarn Adams](https://www.reddit.com/r/IAmA/comments/1avszc/im_tarn_adams_of_bay_12_games_cocreator_of_dwarf/c919fo8) on version control
+    * Find a middle ground between good practice and getting things done
+  * History of VCSes
+    * CVS (1990)
+    * SVN (2000)
+    * Git (2005)
 * Writing code in a file
   * Create the Contact class from yesterday in a file
   * Use the class in JREPL
@@ -76,21 +87,10 @@
 ### Day 3
 
 * Review instance/static fields and methods
-* Object-oriented vs procedural vs functional programming
-  * OOP: Data and methods are combined
-  * PP: Data and methods are separate
-  * FP: Data and methods are separate, and data is immutable
-* Overview of Git
-  * Why track changes?
-    * Collaboration
-    * Revert mistakes
-    * Offsite backup
-  * Interesting comments from [Tarn Adams](https://www.reddit.com/r/IAmA/comments/1avszc/im_tarn_adams_of_bay_12_games_cocreator_of_dwarf/c919fo8) on version control
-    * Find a middle ground between good practice and getting things done
-  * History of VCSes
-    * CVS (1990)
-    * SVN (2000)
-    * Git (2005)
+  * Start with data classes (classes that only contain fields)
+  * Methods let you write code that reads from and writes to those fields
+  * Constructors are methods that run right when the object is created
+* Git
   * Create a repo and clone it via IntelliJ
   * Write code, commit, and push
   * Show diff
