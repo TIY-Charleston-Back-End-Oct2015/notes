@@ -72,3 +72,50 @@
   * Use static methods if it is "standalone" (no need to access fields)
   * Static methods and fields (look at the ones in `Math` and `System`)
   * Create a static method `isValidName` in our project and run it in the REPL
+
+### Day 3
+
+* Review instance/static fields and methods
+* Object-oriented vs procedural vs functional programming
+  * OOP: Data and methods are combined
+  * PP: Data and methods are separate
+  * FP: Data and methods are separate, and data is immutable
+* Overview of Git
+  * Why track changes?
+    * Collaboration
+    * Revert mistakes
+    * Offsite backup
+  * Interesting comments from [Tarn Adams](https://www.reddit.com/r/IAmA/comments/1avszc/im_tarn_adams_of_bay_12_games_cocreator_of_dwarf/c919fo8) on version control
+    * Find a middle ground between good practice and getting things done
+  * History of VCSes
+    * CVS (1990)
+    * SVN (2000)
+    * Git (2005)
+  * Create a repo and clone it via IntelliJ
+  * Write code, commit, and push
+  * Show diff
+  * Three ways to revert your changes
+    * If not committed yet
+      * Under Local Changes, right-click the file you want to revert
+      * Click "Revert..."
+    * If committed but not pushed
+      * Under Log, right-click the commit you want to go back to
+      * Click "Reset Current Branch to Here..."
+      * Choose "Hard"
+    * If committed and pushed
+      * Under Log, right-click the commit you want to revert
+      * Click "Create Patch..."
+      * Check "Reverse patch" and create it
+      * Under the VCS menu, choose "Apply Patch..."
+      * Delete the patch file
+      * Commit your changes
+* Create a text-based game
+  * Demonstrate use of arrays/classes, static methods, and control flow
+* Use `Scanner` to read console input
+  * Unlike output, input requires creating an object
+  * Book analogy: Reading requires a bookmark, but writing is simply appending at the end
+* Control flow
+  * Conditionals
+  * Loops
+  * Recursion
+  * Exceptions
