@@ -90,6 +90,11 @@
   * Start with data classes (classes that only contain fields)
   * Methods let you write code that reads from and writes to those fields
   * Constructors are methods that run right when the object is created
+  * Examples
+    * `Circle`
+    * `Person`
+    * `Book`
+    * `Email`
 * Git
   * Create a repo and clone it via IntelliJ
   * Write code, commit, and push
