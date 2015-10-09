@@ -98,7 +98,21 @@
 * Git
   * Create a repo and clone it via IntelliJ
   * Write code, commit, and push
-  * Show diff
+* Create a text adventure game
+  * Demonstrate use of arrays/classes, static methods, and control flow
+* Use `Scanner` to read console input
+  * Unlike output, input requires creating an object
+  * Book analogy: Reading requires a bookmark, but writing is simply appending at the end
+* Control flow
+  * Conditionals
+  * Loops
+  * Recursion
+  * Exceptions
+
+### Day 4
+
+* Git
+  * Show diff, commit, and push
   * Three ways to revert your changes
     * If not committed yet
       * Under Local Changes, right-click the file you want to revert
@@ -114,13 +128,18 @@
       * Under the VCS menu, choose "Apply Patch..."
       * Delete the patch file
       * Commit your changes
-* Create a text-based game
-  * Demonstrate use of arrays/classes, static methods, and control flow
-* Use `Scanner` to read console input
-  * Unlike output, input requires creating an object
-  * Book analogy: Reading requires a bookmark, but writing is simply appending at the end
-* Control flow
-  * Conditionals
-  * Loops
-  * Recursion
-  * Exceptions
+* Text adventure
+  * Refactor code into `Player` class
+  * Add command system
+  * Use `ArrayList` to store inventory
+* Data structures
+  * Review arrays and classes
+  * Static vs dynamic
+  * Create ArrayLists and HashMaps
+  * Contrast the four data structures
+    * Array (static sequential)
+    * Class (static associative)
+    * ArrayList (dynamic sequential)
+    * HashMap (dynamic associative)
+* How do static and dynamic data structures work?
+  * Stack vs Heap
