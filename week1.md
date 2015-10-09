@@ -105,8 +105,6 @@
   * Book analogy: Reading requires a bookmark, but writing is simply appending at the end
 * Control flow
   * Conditionals
-  * Loops
-  * Recursion
   * Exceptions
 
 ### Day 4
@@ -132,6 +130,9 @@
   * Refactor code into `Player` class
   * Add command system
   * Use `ArrayList` to store inventory
+* Control flow
+  * Loops
+  * Recursion
 * Data structures
   * Review arrays and classes
   * Static vs dynamic
