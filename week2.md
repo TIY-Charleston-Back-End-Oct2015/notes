@@ -13,3 +13,37 @@
   * Methods
   * Control flow (if, while, for, throw)
   * ArrayLists and HashMaps
+
+### Day 2
+
+* Contact project
+  * Create a constructor for `Contact`
+  * Create `Contact` objects
+  * Change their fields
+  * Add them to an `ArrayList<Contact>`
+  * Get a contact out of the list
+  * Search an `ArrayList<Contact>` for someone with a particular name
+* Use `String.format` in the ToDo project
+* Text adventure
+  * Add health and damage to `Player`
+  * Create a `Player` constructor
+  * Create an `Enemy` class
+  * Create a `Character` class that they extend
+  * Create a `battle` method in `Character`
+  * Create a `toString` method in `Character`
+  * Discuss `@Override`
+* Contrived example of inheritance
+  * Animal
+    * Mammal
+      * Dog
+      * Human
+    * Reptile
+      * Alligator
+      * Turtle
+    * Bird
+      * Hawk
+      * Parrot
+* Topics of discussion
+  * Review constructors
+  * Extending a class (inheritance)
+  * The `Object` class
