@@ -64,3 +64,8 @@
 * Dependency management
   * Maven
   * Pull in the [JSON library](http://jodd.org/doc/json/)
+  * Add to project
+    * File -> Project Structure...
+    * Click "Libraries" and then the plus button
+    * Click "From Maven..."
+    * Search for the library
