@@ -68,4 +68,4 @@
     * File -> Project Structure...
     * Click "Libraries" and then the plus button
     * Click "From Maven..."
-    * Search for the library
+    * Search for "jodd json"
