@@ -47,3 +47,20 @@
   * Review constructors
   * Extending a class (inheritance)
   * The `Object` class
+
+### Day 3
+
+* Exercise
+  * Loop over string array
+  * Use `ArrayList` instead of a primitive array
+  * Use `Contact` class instead of strings
+* Text advanture
+  * Store weapon in `Character` and create `Weapon` class
+  * Add weapon's damage in `battle` method
+  * Add save feature
+* File I/O
+  * JSON
+  * `File`, `FileWriter`, `FileReader`
+* Dependency management
+  * Maven
+  * Pull in the [JSON library](http://jodd.org/doc/json/)
