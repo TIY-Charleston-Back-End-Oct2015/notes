@@ -83,7 +83,6 @@
   * Set breakpoint in `main` to see contents of objects
   * Create bug in `findItem` and set breakpoint
   * Hotswap values
-  * Write test for `battle` method
 * Debugging with IntelliJ
   * Primitive form of debugging: printing variables
   * Better form of debugging: IntelliJ's debugger
