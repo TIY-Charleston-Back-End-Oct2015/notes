@@ -70,3 +70,33 @@
     * Click "Libraries" and then the plus button
     * Click "From Maven..."
     * Search for "jodd json"
+
+### Day 4
+
+* Exercise
+  * Keep asking for input until valid input is received
+  * As a group, create a `HashMap<String, ArrayList<String>>`
+* `switch` statements
+  * Use in the Zoo project
+* Text adventure
+  * Save file name constant as `static final`
+  * Set breakpoint in `main` to see contents of objects
+  * Create bug in `findItem` and set breakpoint
+  * Hotswap values
+  * Write test for `battle` method
+* Debugging with IntelliJ
+  * Primitive form of debugging: printing variables
+  * Better form of debugging: IntelliJ's debugger
+    * Set breakpoint
+    * See what variables contain at that moment in time
+    * Reload changed classes
+      * Can't reload method if it's in the middle of execution
+      * Can't reload method if its signature has changed
+      * [Notch using this feature](https://www.youtube.com/watch?v=BES9EKK4Aw4)
+* Forum
+  * Create console-based forum with custom file format
+  * Create `Post` and `ArrayList<Post>`
+  * Create file and read its contents into the arraylist
+  * Loop over posts and print the top ones out
+  * Break the loop out into `printPosts`
+  * Create an infinite loop that listens for a post # to jump to
