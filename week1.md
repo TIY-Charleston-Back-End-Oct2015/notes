@@ -43,6 +43,7 @@
 
 ### Day 2
 
+* Review assignment (arrays and classes)
 * Overview of Git
   * Why track changes?
     * Collaboration
@@ -86,6 +87,7 @@
 
 ### Day 3
 
+* Review assignment (methods)
 * Review instance/static fields and methods
   * Start with data classes (classes that only contain fields)
   * Methods let you write code that reads from and writes to those fields
@@ -109,6 +111,7 @@
 
 ### Day 4
 
+* Review assignment (control flow)
 * Git
   * Show diff, commit, and push
   * Three ways to revert your changes
