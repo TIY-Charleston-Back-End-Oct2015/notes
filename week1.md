@@ -111,7 +111,7 @@
 
 ### Day 4
 
-* Review assignment (control flow)
+* Review assignment (control flow - ATM)
 * Git
   * Show diff, commit, and push
   * Three ways to revert your changes
