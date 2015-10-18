@@ -1,5 +1,6 @@
 ### Day 1
 
+* Review assignment (dynamic data structures - ATM)
 * Running Java code the normal way
   * Main method
   * Jar files
@@ -16,6 +17,7 @@
 
 ### Day 2
 
+* Review assignment (review - inventory)
 * Contact project
   * Create a constructor for `Contact`
   * Create `Contact` objects
@@ -50,6 +52,7 @@
 
 ### Day 3
 
+* Review assignment (object-oriented programming - inventory)
 * Exercise
   * Loop over string array
   * Use `ArrayList` instead of a primitive array
@@ -73,6 +76,7 @@
 
 ### Day 4
 
+* Review assignment (file I/O - save JSON)
 * Exercise
   * Keep asking for input until valid input is received
   * As a group, create a `HashMap<String, ArrayList<String>>`
