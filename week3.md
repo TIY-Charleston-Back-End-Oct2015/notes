@@ -33,4 +33,37 @@
     * Type in "junit:junit:4.12"
   * Create a test
     * Select a class you want to write tests for
-    * View -> Test 
+    * View -> Test
+
+### Day 2
+
+* Review assignment (review - people)
+* Desktop UI with Java FX
+  * Install [Scene Builder](http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-1x-archive-2199384.html)
+  * Build a to-do app and a web browser
+    * New Project -> Java FX template
+    * Run blank project
+    * Look at the three files you start with
+    * Edit title and window size in Main.java
+    * Use Scene Builder to change sample.fxml
+    * Edit Controller.java
+      * Implement `Initializable`
+      * Implement an action method
+      * Bring in controls using `@FXML`
+      * Make all buttons set min size to USE_PREF_SIZE
+      * To-do app
+        * Create an `ObservableList`
+        * Set the `ListView` to use it
+        * Wire up the "Add", "Toggle", and "Remove" buttons
+      * Web browser
+        * Wire up the "Go" button
+        * Allow hitting enter in URL textfield
+        * Create a `ChangeListener` to update the URL textfield
+        * Wire up the back and forward buttons
+  * Build as a JAR file
+    * File -> Project Structure...
+    * Click on "JavaFXApp.jar"
+    * Click on "Create Manifest..."
+    * Click OK
+    * Build -> Build Artifacts...
+    * Click on "Build"
