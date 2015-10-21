@@ -66,3 +66,47 @@
   * Click OK
   * Build -> Build Artifacts...
   * Click on "Build"
+
+### Day 3
+
+* Review assignment (javafx - contacts)
+* Install [Android Studio](https://developer.android.com/sdk/index.html)
+* Download the latest SDK
+  * At the main screen, go to: Configure -> SDK Manager
+  * Download the SDK for Android 4.0.3
+* Install Intel HAXM (allows Android emulators to run faster)
+  * Go to `~/Library/Android/sdk/extras/intel/Hardware_Accelerated_Execution_Manager`
+  * Double-click "IntelHAXM.dmg" and run the installer
+* Create a project
+  * At the main screen, go to: Start a new Android Studio project
+  * Give it a name and type "theironyard.com" as the company domain, and click "Next"
+  * Select Android 4.0.3 and click "Next"
+  * Select "Empty Activity" and click "Next"
+  * Click "Finish"
+* Configure an emulator
+  * In your project, click the "Android Virtual Device Manager" button
+  * Click on "Create Virtual Device..."
+  * Select a device and click "Next..."
+  * Select an Android version and click "Next..."
+  * Make sure "Use Host GPU" is checked
+  * Click "Show Advanced Settings"
+  * Set the RAM to 1GB (so Intel HAXM will work)
+* To-do app
+  * Add listview, text field, and button
+  * Set listview width/height to `match_parent`
+  * Create variables for all controls and use `findViewById` in `onCreate`
+  * Create an `ArrayAdapter` and connect it to the listview
+  * Implement `View.OnClickListener` and connect it to the button
+  * Implement `AdapterView.OnItemLongClickListener` and connect it to the listview
+* Web browser
+  * Remove action bar
+    * Edit `res/values/styles.xml`
+    * Change "DarkActionBar" to "NoActionBar"
+  * Add text field, three buttons, and webview
+  * Create variables for all controls and use `findViewById` in `onCreate`
+  * Create and set a `WebViewClient`
+  * Implement `View.OnClickListener` and connect it to all the buttons
+  * Add internet permission to AndroidManifest.xml
+    * `<uses-permission android:name="android.permission.INTERNET" />`
+  * Create an anonymous class based on `WebViewClient`
+    * Override the `onPageStarted` method to update the address bar
