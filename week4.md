@@ -45,3 +45,34 @@
   * JAR -> From modules with dependencies...
   * Choose the main class and click OK
   * Build -> Build Artifacts...
+
+### Day 2
+
+* Review assignment (spark - microblog)
+* Exercise (parse string, remove duplicate words, build new string)
+* Add multi-user support to HelloSpark
+  * Store users in `HashMap<String, User>`
+  * Change "Create Account" to "Login or Create Account"
+  * Change the `/create-account` route to `/login-or-create-account` and make it login as well
+  * Change the `/accounts` route to use `users.values()`
+  * Create `resources/templates/my-account.html`
+  * Create `resources/templates/please-login.html`
+  * Create the `/my-account` route
+  * Store the current user in a `Session`
+  * If current user is null, send down `please-login.html`
+  * Otherwise, send down `my-account.html`
+* Cookies
+  * The `Session` works by storing a cookie with a session ID
+  * Cookies are small pieces of data sent from a web server
+  * Browsers send them back each time they talk to the server afterwards
+* BeerTracker
+  * Add the Spark and Mustache libraries
+  * Create `resources/templates`
+  * Create `resources/templates/logged-in.html`
+  * Create `/` route
+  * Create `resources/templates/not-logged-in.html`
+  * Create `/login` route
+  * Create `Beer` and the `/create-beer` route
+  * Add beers to the `logged-in.html` template
+  * Add an `id` to `Beer`
+  * Create `/delete-beer` route and form
