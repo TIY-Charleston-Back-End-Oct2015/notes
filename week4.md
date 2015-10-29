@@ -104,3 +104,57 @@
     * If password isn't equal, run `Spark.halt(403)`
     * Add username to session
     * Redirect to `/`
+
+### Day 4
+
+* Review assignment (paging - people web)
+* Review mustache
+  * String name;
+    * Welcome, {{name}}!
+  * ArrayList<String> names;
+    * {{#names}} {{.}} {{/names}}
+  * Message msg;
+    * {{#message}} {{text}} by {{username}} {{/message}}
+  * ArrayList<Message> messages;
+    * {{#messages}} {{text}} by {{username}} {{/messages}}
+  * Conditional (truthy)
+    * {{#name}}Welcome, {{name}}!{{/name}}
+  * Conditional (falsey)
+    * {{^name}}Please login.{{/name}}
+* Exercise (reverse array, turn array into hashmap)
+* Layers of the Internet
+  * Physical layer (hardware)
+    * Wireless
+    * Electrical (ethernet, coaxial)
+    * Fiber optics
+  * Internet layer (packets)
+    * IPv4
+    * IPv6
+  * Transport layer (reliability)
+    * UDP (checksum)
+    * TCP (checksum and retransmission)
+  * Application layer (end users)
+    * ASCII
+    * UTF-8
+    * HTTP
+    * HTTP/2
+* Forum
+  * Create `header.html` to prevent duplication
+  * Create create-message form in `header.html`
+    * Use `<input type="hidden" name="replyId" value="{{replyId}}" />` to pass the reply id to the server
+  * Create `/create-message` route
+    * Get username from session
+    * If username is null, run `Spark.halt(403)`
+    * Get replyId and text from `request.queryParams`
+    * In a try/catch, create `Message` and add it to the `ArrayList<Message>`
+    * Redirect to `/`
+  * You can make it refresh the current page rather than take you home
+    * `response.redirect(request.headers("Referer"));`
+* Build as a JAR file
+  * File -> Project Structure...
+  * Click "Artifacts" and then the plus button
+  * JAR -> From modules with dependencies...
+  * Choose the main class and click OK
+  * Build -> Build Artifacts...
+* Upload JAR file to the "Releases" section on Github
+* CRUD (create, read, update, delete)
