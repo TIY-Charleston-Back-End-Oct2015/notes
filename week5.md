@@ -69,3 +69,33 @@
   * Create `toggleTodo`
     * `UPDATE todos SET is_done = NOT is_done WHERE id = ?`
   * Call `toggleTodo` when `optionNum == 2`
+
+### Day 2
+
+* Review assignment (sql basics - beer tracker database)
+* Joins
+  * Most common type is `INNER JOIN`
+  * There is also `LEFT JOIN`, `RIGHT JOIN`, and `FULL JOIN`
+  * [Visual Representation of SQL Joins](http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins)
+* Test-Driven Development (TDD)
+* Create ForumWebDatabase
+  * Create `Connection`
+  * Create `createTables` tables which defines the `users` and `messages` tables
+  * Add `id` to `User` class
+  * Create `static void insertUser(Connection conn, String username, String password)`
+  * Create `static User selectUser(Connection conn, String username)`
+  * Create a test for `insertUser` and `selectUser` called `testUser`
+    * Add junit from Maven
+    * Create `src/test` and mark it as a test dir
+    * Create `startConnection` and `endConnection`
+  * Create `static void insertMessage(Connection conn, int replyId, int userId, String text)`
+  * Create `static Message selectMessage(Connection conn, int id)`
+  * Create a test for `insertMessage` and `selectMessage` called `testMessage`
+  * Create `static ArrayList<Message> selectMessages(Connection conn, int replyId)`
+  * Create a test for `selectMessages` called `testMessages`
+  * Delete the global `users` and `messages` collections and the test methods
+  * Use new methods
+    * Use `insertUser` and `selectUser` in `/login`
+    * Use `insertMessage` in `/create-message`
+    * Use `selectMessage` in `/replies`
+    * Use `selectMessages` in `/` and `/replies`
