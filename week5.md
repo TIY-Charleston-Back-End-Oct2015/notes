@@ -58,14 +58,14 @@
 * Create ToDoDatabase (based on the original ToDo project)
   * Add the H2 JAR
   * Create `Connection` and `Statement`
-  * `CREATE TABLE IF NOT EXISTS todos (text VARCHAR, is_done BOOLEAN)`
+  * `CREATE TABLE IF NOT EXISTS todos (id IDENTITY, text VARCHAR, is_done BOOLEAN)`
   * Create `insertTodo` with `PreparedStatement`
-    * `INSERT INTO todos VALUES (?, false)`
+    * `INSERT INTO todos VALUES (NULL, ?, false)`
   * Call `insertTodo` when `optionNum == 1`
   * Create `selectTodos` that returns `ArrayList<ToDoItem>`
     * `SELECT * FROM todos`
   * Remove the original `ArrayList<ToDoItem> todos` declaration
   * Call `selectTodos` at the top of the while loop
   * Create `toggleTodo`
-    * `UPDATE todos SET is_done = NOT is_done WHERE ROWNUM = ?`
+    * `UPDATE todos SET is_done = NOT is_done WHERE id = ?`
   * Call `toggleTodo` when `optionNum == 2`
