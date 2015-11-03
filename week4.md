@@ -107,7 +107,7 @@
 
 ### Day 4
 
-* Review assignment (paging - people web)
+* Review assignment (spark - paging)
 * Review mustache
   * `String name;`
     * Welcome, {{name}}!
