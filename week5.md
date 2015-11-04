@@ -99,3 +99,45 @@
     * Use `insertMessage` in `/create-message`
     * Use `selectMessage` in `/replies`
     * Use `selectReplies` in `/` and `/replies`
+
+### Day 3
+
+* Review assignment (sql joins and tdd - crud)
+* Exercise (manually sort an array of strings)
+* Time
+  * Old way: `java.util.Date` and `java.util.Calendar`
+  * New way: `java.time.LocalDateTime`
+  * Advantages of `LocalDateTime`
+    * Sane API
+    * Immutable
+    * Supports ISO-8601
+* Create Calendar
+  * Add Spark, Mustache, JUnit, and H2 via Maven
+    * `com.sparkjava:spark-core:2.3`
+    * `com.sparkjava:spark-template-mustache:2.3`
+    * `junit:junit:4.12`
+    * `com.h2database:h2:1.4.190`
+  * Create `Event` class (id, description, startdate)
+  * Create `resources/templates`
+  * Create `resources/templates/events.html`
+  * Create GET route for `/`
+  * Inject `LocalDateTime.now()` into template to set default time
+  * Create `Connection` and `createTables`
+  * Create `insertEvent` and `selectEvents`
+  * Add test for these methods
+    * Create `test` dir and add `MainTest`
+    * `startConnection` and `endConnection`
+    * `testEvents`
+  * Add `selectEvents` to `/` route
+  * Create POST route for `/create-event`
+  * Support changing the display order
+    * Modify `selectEvents` to take `boolean isAscending` and use `String.format` to inject `ASC` or `DESC`
+      * Create an overloaded version of `selectEvents` that keeps one argument
+    * In `events.html`, add links based on `isAscending`
+    * In the `/` route, get the query param and create an `isAscending` variable
+  * Support paging
+    * Create `LIMIT` constant
+    * Add `int offset` to `selectEvents`
+    * Get `offset` from `request.queryParams` in `/`
+    * Pass `nextOffset` into the template
+    * In `events.html`, create the "Next" link
