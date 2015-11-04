@@ -91,11 +91,11 @@
   * Create `static void insertMessage(Connection conn, int replyId, int userId, String text)`
   * Create `static Message selectMessage(Connection conn, int id)`
   * Create a test for `insertMessage` and `selectMessage` called `testMessage`
-  * Create `static ArrayList<Message> selectMessages(Connection conn, int replyId)`
-  * Create a test for `selectMessages` called `testMessages`
+  * Create `static ArrayList<Message> selectReplies(Connection conn, int replyId)`
+  * Create a test for `selectReplies` called `testReplies`
   * Delete the global `users` and `messages` collections and the test methods
   * Use new methods
     * Use `insertUser` and `selectUser` in `/login`
     * Use `insertMessage` in `/create-message`
     * Use `selectMessage` in `/replies`
-    * Use `selectMessages` in `/` and `/replies`
+    * Use `selectReplies` in `/` and `/replies`
