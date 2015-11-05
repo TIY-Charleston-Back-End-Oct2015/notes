@@ -141,3 +141,29 @@
     * Get `offset` from `request.queryParams` in `/`
     * Pass `nextOffset` into the template
     * In `events.html`, create the "Next" link
+
+### Day 4
+
+* Review assignment (sql paging - people web)
+* Create CountriesAjax
+  * Create project and add three libraries
+    * `com.h2database:h2:1.4.190`
+    * `com.sparkjava:spark-core:2.3`
+    * `org.jodd:jodd-json:3.6.6`
+  * Open database
+    * Create `Connection`
+    * Create a table
+    * Define `insertCountry`, `selectCountry`, and `selectCountries`
+  * Serve files in the current directory
+    * `Spark.externalStaticFileLocation("public");`
+    * `Spark.init();`
+  * Create routes for AJAX queries
+    * POST `/add-country`
+    * GET `/get-country`
+    * GET `/get-countries`
+  * Build JAR file
+    * File -> Project Structure...
+    * Click "Artifacts" and then the plus button
+    * JAR -> From modules with dependencies...
+    * Choose the main class and click OK
+    * Build -> Build Artifacts...
