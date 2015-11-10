@@ -39,7 +39,7 @@
 
 ### Day 2
 
-* Review assignment (microblog spring)
+* Review assignment (spring - microblog)
 * Exercise (reverse number)
 * Java build systems
   * Ant (2000)
