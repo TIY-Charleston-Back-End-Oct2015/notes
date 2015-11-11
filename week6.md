@@ -93,3 +93,41 @@
   * Use `@Autowired` to bring the repo into the controller
   * In `/add-beer`, create a `Beer` object and save it to the repo
   * In `/`, add the beers to the `Model`
+
+### Day 3
+
+* Review assignment (spring - microblog continued)
+* Exercise (palindrome detector)
+* BeerTrackerSpring
+  * Add a column
+    * Add `Integer calories` to `Beer`
+    * Add support for calories in `home.html`
+    * Add calories in the `/add-beer` route
+  * Add type filter
+    * In `home.html`, add links for each beer type
+    * Add `findByType` to `BeerRepository`
+    * Modify the `/` route to use it if the `type` parameter isn't null
+  * Add type and calories filter
+    * Add `findByTypeAndCalories` to `BeerRepository`
+    * Modify the `/` route to use it if the `type` and `calories` parameters aren't null
+    * Add `findByTypeAndCaloriesIsLessThanEqual` to `BeerRepository`
+  * More query methods
+    * `findFirstByType`
+    * `countByType`
+    * `findByTypeOrderByNameAsc`
+    * [Tutorial](http://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-creating-database-queries-from-method-names/)
+  * Add search form
+    * In `home.html`, add search form
+    * Add `searchByName` to `BeerRepository` with `@Query`
+  * Add a user class and do joins
+    * Create `User` with `@Table(name = "users")`
+    * Create `src/main/resources/templates/login.html`
+    * Create `/login` route and return the template in the `/` route
+    * Create `/logout` route and add link in `home.html`
+    * Create `UserRepository` interface with `findOneByName`
+    * Add `UserRepository` to the controller and use it in the `/login` route
+    * Add `User` to `Beer` with `@ManyToOne`
+    * Edit `home.html` to show the username next to each item
+    * Add `List<Beer>` to `User` with `@OneToMany(mappedBy = "user")`
+    * Add a `showMine` parameter to the `/login` route and a link to `home.html`
+    * Insert a default user at startup by creating an init method with `@PostConstruct`
