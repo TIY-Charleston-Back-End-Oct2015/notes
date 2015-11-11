@@ -11,7 +11,6 @@
     * Check the following options:
       * Web
       * Mustache
-      * PostgreSQL
     * Download and unzip the project
     * Import into IntelliJ
     * Choose "Import project from external model" and select Gradle
