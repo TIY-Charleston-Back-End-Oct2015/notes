@@ -130,3 +130,28 @@
     * Add `List<Beer>` to `User` with `@OneToMany(mappedBy = "user")`
     * Add a `showMine` parameter to the `/login` route and a link to `home.html`
     * Insert a default user at startup by creating an init method with `@PostConstruct`
+
+### Day 4
+
+* Review assignment (spring - orm omg)
+* Major security topics
+  * SQL injection prevention
+  * Cross-site scripting prevention
+  * SSL encryption
+  * Secure password storage
+* BeerTrackerSpring
+  * Pass `HttpSession` directly into controller methods
+  * Pass numbers to controller methods as `int` instead of `Integer`
+  * Refactor into separate subpackages
+    * Make the fields in `Beer` and `User` public
+    * Move `Beer` and `User` into a `entities` subpackage
+    * Move the controller into a `controllers` subpackage
+    * Move `BeerRepository` and `UserRepository` into a `services` subpackage
+  * Add a secure login system
+    * Add password field to `login.html` and the `User` class
+    * Make the `/login` route take a password and make both params required
+    * Download [`PasswordHash.java`](https://crackstation.net/source/password-hashing/PasswordHash.java) and use it to store and validate the password
+    * Drop and create database
+* Git in depth
+  * Fork and pull requests vs same repo
+  * Merge conflicts
