@@ -30,3 +30,46 @@
     * Add `testLogin` to the test file (use `MockMvcRequestBuilders.post()`)
     * Add `testAddEvent` to the test file (use `MockMvcRequestBuilders.post()`)
     * Set mock username with `sessionAttr`
+
+### Day 2
+
+* Review assignment (spring - paging and tdd)
+* Topics
+  * JSON API + AJAX
+  * Uploading files
+* Install [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en) chrome extension
+* Create IronGram
+  * Create project from template with the following options
+    * Web
+    * DevTools
+    * JPA
+    * H2
+    * PostgreSQL
+  * Create initial server-side code
+    * Modify `application.properties`
+      * `spring.datasource.url=jdbc:h2:./main`
+      * `spring.jpa.generate-ddl=true`
+      * `spring.jpa.hibernate.ddl-auto=none`
+    * Create `IronGramController` with `@RestController`
+    * Create `User` with `username` and `password`
+    * Create `Photo` with `sender`, `recipient`, and `filename`
+    * Create `UserRepository` and `PhotoRepository`
+    * Copy `PasswordHash.java` into project
+    * In the controller, add the repositories and create the `/login`, `/logout`, and `/user` routes
+  * Create public folder
+    * Create `WebConfig` which extends `WebMvcConfigurerAdapter`
+      * Override `addResourceHandlers` to add `"public/**"`
+    * Download [jQuery](http://jquery.com/download/) and move it into `public`
+    * Create `public/index.html` with jquery included
+    * Create login, logout, and upload forms
+    * Create a `<script>` tag that uses `$.get("/user", getUser)` and conditionally shows the forms based on the return data
+  * Create upload route
+    * In the controller, create the `/upload` route with a `MultipartFile` as the file argument
+      * Read username from session and throw exception if null
+      * Use `File.createTempFile` and `FileOutputStream` to write to disk
+      * Create `Photo` object
+      * Throw exception if recipient is null
+  * Show photos
+    * Create `/photos` route
+    * Add `$.get("/photos", getPhotos)` to the `<script>` tag
+    * Add a `setInterval` that gets the photos every 3 seconds
