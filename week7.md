@@ -71,3 +71,39 @@
     * Create `/photos` route
     * Add `$.get("/photos", getPhotos)` to the `<script>` tag
     * Add a `setInterval` that gets the photos every 3 seconds
+
+### Day 3
+
+* Review assignment (spring - json)
+  * Break JS into separate file
+  * Remove unnecessary config file
+  * Create better temp file names
+  * Show example using a thread
+* Fork ToDoSpring
+  * Fix all the bugs until you can create and display to-dos
+  * Git
+    * Merge conflicts
+    * Ignoring files
+    * Branches
+* Create AnonUpload
+  * Create project structure
+    * Create project from template with the following options
+      * Web
+      * DevTools
+      * JPA
+      * H2
+      * PostgreSQL
+  * Create client-side code
+    * Create `public`
+    * Create `public/index.html` and `public/main.js`
+    * Copy jquery into `public`
+  * Create server-side code
+    * Modify `application.properties`
+      * `spring.datasource.url=jdbc:h2:./main`
+      * `spring.jpa.generate-ddl=true`
+      * `spring.jpa.hibernate.ddl-auto=none`
+    * Create `AnonFile`
+    * Create `AnonFileRepository`
+    * Create `AnonUploadController` with `@RestController`
+    * Create a `/files` route
+    * Create an `/upload` route
