@@ -57,8 +57,6 @@
     * Copy `PasswordHash.java` into project
     * In the controller, add the repositories and create the `/login`, `/logout`, and `/user` routes
   * Create public folder
-    * Create `WebConfig` which extends `WebMvcConfigurerAdapter`
-      * Override `addResourceHandlers` to add `"public/**"`
     * Download [jQuery](http://jquery.com/download/) and move it into `public`
     * Create `public/index.html` with jquery included
     * Create login, logout, and upload forms
