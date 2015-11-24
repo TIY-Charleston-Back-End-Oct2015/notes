@@ -86,4 +86,4 @@
   * Map over the people to interleave the header into them
   * Turn all the people into hash-maps
   * Keywordize the keys
-  * Filter out only people form a certain country
+  * Filter out only people from a certain country
