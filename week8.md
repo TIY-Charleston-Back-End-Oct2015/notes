@@ -87,3 +87,4 @@
   * Turn all the people into hash-maps
   * Keywordize the keys
   * Filter out only people from a certain country
+* [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
