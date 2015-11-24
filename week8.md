@@ -62,3 +62,28 @@
     * `(doseq [name names] (println name))`
     * `(format "Hello, %s!" (get player :name))`
     * `(doseq [name names] (println (format "Hello, %s!" name)))`
+
+### Day 2
+
+* Create to-do-clojure
+  * Add "Run" configuration
+    * Edit Configurations... -> Add -> Leiningen
+    * Arguments: `run`
+    * Check "Use trampoline"
+  * Open `core.clj`
+  * Create `atom`
+  * Create `let` that adds the result of `read-line` to the atom
+  * Use a `loop` to continuously read until `q` is pressed
+  * Use a `doseq` to print out the results
+  * Save the to-do list to a file
+* Create people-clojure
+  * Add "REPL" configuration
+    * Edit Configurations... -> Add -> Clojure REPL -> Local
+    * Name: `REPL`
+  * Read the file and split it into lines
+  * Split each line by commas
+  * Pull out the header row
+  * Map over the people to interleave the header into them
+  * Turn all the people into hash-maps
+  * Keywordize the keys
+  * Filter out only people form a certain country
