@@ -88,3 +88,35 @@
   * Keywordize the keys
   * Filter out only people from a certain country
 * [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
+
+### Day 3
+
+* Review assignment (clojure map and filter - purchases)
+* Editing Lisp
+  * Create custom keymap in IntelliJ
+  * Paredit
+    * Wrap (cmd + paren) - surround next form with paren
+    * Splice (option + s) - remove parens of currently-enclosing form
+    * Barf - push form out of currently-enclosing form
+    * Slurp - pull an outside form into the currently-enclosing form
+* Representing a deck of cards in Clojure vs Java 8
+* Open people-clojure
+  * Display people in HTML
+    * Dependencies
+      * `[ring "1.4.0"]`
+      * `[hiccup "1.0.5"]`
+    * Move CSV code into separate function
+      * Use a reader comment for the `spit` call
+      * Make it return `people` instead
+    * Create a handler function that returns:
+      * `{:status 200 :headers {"Content-Type" "text/html"} :body "Hello World"}`
+    * Require `ring.adapter.jetty`
+    * In the main function, run:
+      * `(jetty/run-jetty #'handler {:port 3000 :join? false})`
+    * Require `hiccup.core`
+    * Use `hiccup/html` to generate html
+* Functional programming in Java
+  * Start with an array of names
+  * Make every name uppercase
+  * Remove the ones that start with "A"
+  * Solve via streams (map and filter)
