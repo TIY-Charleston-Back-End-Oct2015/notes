@@ -1,4 +1,4 @@
-## Week 9 - Recursion and Java Interop
+## Week 9 - Recursion and Parallelism
 
 ### Day 1
 
