@@ -4,3 +4,6 @@
 * [CodingBat](http://codingbat.com/java)
 * [HowToDoItInJava](http://howtodoinjava.com/)
 * [Password Hashing Security](https://crackstation.net/hashing-security.htm)
+* [Do Things: A Clojure Crash Course](http://www.braveclojure.com/do-things/)
+* [4clojure](https://www.4clojure.com/)
+* [Rich Hickey Fanclub](https://github.com/tallesl/Rich-Hickey-fanclub)
