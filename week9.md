@@ -63,3 +63,50 @@
     * Get `randomNeighbor`
     * If it is null, return false
     * Otherwise, run `tearDownWall`, run `createMaze` in a while loop and then return true
+
+### Day 3
+
+* Review assignment (clojure recursion - maze)
+* Parallelism
+  * Clojure `pmap` and `pvalues`
+  * Java `parallelStream`
+  * Caveat: Amdahl's law
+* Create ants-clojure
+  * `(def ant-count 100)`
+  * `(def ants (atom nil))`
+  * `create-ants` returns a list of maps with random `:x` and `:y` fields
+  * Call `(reset! ants (create-ants))` before the timer is started
+  * `draw-ants` takes a `context`
+    * Run `clearRect` to clear the screen
+    * `doseq` over the ants
+      * `(.setFill context Color/BACK)`
+      * `(.fillOval context (:x ant) (:y ant) 5 5)`
+  * Run `draw-ants` in the timer
+  * `random-step` returns a number between -1 and 1
+  * `move-ant` takes an `ant` and `assoc`es a new `:x` and `:y` changed by `(random-step)`
+  * Before drawing the ants, run `(reset! ants (map move-ant (deref ants)))`
+  * `(def last-timestamp (atom 0))`
+  * `fps` takes a `now` and returns the frames per second
+    * Calculate the difference between `now` and `last-timestamp`
+    * Divide by `1000000` to get milliseconds
+    * Divide into `1000` to get frames per second
+  * Display the frames per second: `(.setText fps-label (str (fps now)))`
+  * Add `(Thread/sleep 1)` to `move-ant` and use `pmap` to improve performance
+* Create Ants
+  * `static final int ANT_COUNT = 100;`
+  * Define `Ant` class with `double x` and `double y`
+  * Define `ArrayList<Ant> ants` and the `createAnts` method
+  * `createAnts` returns an `ArrayList<Ant>`
+  * Call `createAnts` before the timer is started
+  * `drawAnts` takes `ArrayList<Ant> ant, GraphicsContext context`
+  * `randomStep` returns a number between -1 and 1
+  * `moveAnt` takes an `Ant ant`, changes its position by `randomStep()`, and returns it
+  * `updateAnts` maps over the `ArrayList<Ant>` with `moveAnt`
+  * Before drawing the ants, run `updateAnts`
+  * `long lastTimestamp = 0;`
+  * `fps` takes a `long now` and returns the frames per second
+    * Calculate the difference between `now` and `lastTimestamp`
+    * Divide by `1000000` to get milliseconds
+    * Divide into `1000` to get frames per second
+  * Display the frames per second: `fpsLabel.setText(fps(now) + "");`
+  * Add `Thread.sleep(1)` to `moveAnt` and use `parallelStream` to improve performance
