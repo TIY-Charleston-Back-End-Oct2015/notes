@@ -7,3 +7,4 @@
 * [Do Things: A Clojure Crash Course](http://www.braveclojure.com/do-things/)
 * [4clojure](https://www.4clojure.com/)
 * [Rich Hickey Fanclub](https://github.com/tallesl/Rich-Hickey-fanclub)
+* [Running a JAR on Digital Ocean](https://gist.github.com/oakes/47cd1eaaae83eab634e8)
